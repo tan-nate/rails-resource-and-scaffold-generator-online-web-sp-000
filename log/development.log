@@ -169,3 +169,24 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 122ms (Views: 100.6ms | ActiveRecord: 0.6ms)
 
 
+Started POST "/articles" for 209.90.232.240 at 2019-07-22 13:38:43 +0000
+Cannot render console from 209.90.232.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LCOUWV5TxmIoMYJTwYWOpyu++qfsQOdTFjwFlWsE6EsAGK7A4TIh5W0fgL8Zth1z6mX7fPcfeiGhE2xGajit9Q==", "article"=>{"title"=>"What up!", "body"=>"Heyo! Testing this feature out."}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "What up!"], ["body", "Heyo! Testing this feature out."], ["created_at", "2019-07-22 13:38:43.745103"], ["updated_at", "2019-07-22 13:38:43.745103"]]
+  [1m[35m (50.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://178.128.177.30:57141/articles/1
+Completed 302 Found in 59ms (ActiveRecord: 50.9ms)
+
+
+Started GET "/articles/1" for 209.90.232.240 at 2019-07-22 13:38:43 +0000
+Cannot render console from 209.90.232.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
