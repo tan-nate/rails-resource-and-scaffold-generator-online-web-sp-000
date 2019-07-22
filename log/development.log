@@ -199,3 +199,14 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/articles/1/edit" for 209.90.232.240 at 2019-07-22 13:38:59 +0000
+Cannot render console from 209.90.232.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.2ms)
+  Rendered articles/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.1ms)
+
+
